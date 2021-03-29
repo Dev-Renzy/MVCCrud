@@ -24,7 +24,7 @@ namespace Web.Controllers
             using (MySqlConnection MysqlCon = new MySqlConnection(connection))
             {
                 MysqlCon.Open();
-                using (MySqlCommand command = new MySqlCommand("SELECT * from tblAnimals", MysqlCon))//Query
+                using (MySqlCommand command = new MySqlCommand("SELECT * from tblAnimals", MysqlCon))  //Query
                 {
                     MySqlDataReader rdr = command.ExecuteReader(); //method used to execute the query/mysql command or storedprocedure returns a set of rows from the database.
                     while (rdr.Read())
@@ -47,14 +47,11 @@ namespace Web.Controllers
         [HttpPost]
         public ActionResult Insert(Animals animals)
         {
-
-           
             using (MySqlConnection MysqlCon = new MySqlConnection(connection))
             {
                 MysqlCon.Open();
                 using (MySqlCommand command = new MySqlCommand("INSERT INTO tblAnimals (AnimalName, Price, Pcs) VALUES (@AnimalName, @Price, @Pcs)", MysqlCon))
                 {
-                    
                     command.Parameters.AddWithValue("AnimalName", animals.AnimalName);
                     command.Parameters.AddWithValue("Price", animals.Price);
                     command.Parameters.AddWithValue("Pcs", animals.Pcs);
@@ -67,11 +64,6 @@ namespace Web.Controllers
         }
 
 
-
-        // GET: Animals/Edit/5
-
-
-        // POST: Animals/Edit/5
         [HttpGet]
         public ActionResult Edit(int id, Animals cid)
         {
