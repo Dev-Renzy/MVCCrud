@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Web.Models.Animals>
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Animal Name</th>
+        <th>Price</th>
+        <th>Count</th>
+        <th>Actions</th>
+        
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (var animal in Model)
+        {
+            <tr>
+                <td>@animal.AnimalName</td>
+                <td>@animal.Price</td>
+                <td>@animal.Pcs</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = animal.AnimalsID })    |
+                    @Html.ActionLink("Delete", "Delete", new { id = animal.AnimalsID })
+
+                </td>
+            </tr>
+        }
+    } 
+    
+    
+
+
+</table>
+
+
+
