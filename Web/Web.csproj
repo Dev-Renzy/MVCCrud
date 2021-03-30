@@ -172,7 +172,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Animals\Index.cshtml" />
-    <Content Include="Views\Animals\Create.cshtml" />
+    <Content Include="Views\Animals\Insert.cshtml" />
     <Content Include="Views\Animals\Edit.cshtml" />
     <Content Include="Views\Animals\Delete.cshtml" />
   </ItemGroup>

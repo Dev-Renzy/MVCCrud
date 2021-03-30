@@ -9,6 +9,7 @@ using MySql.Data.MySqlClient;
 using Web.Models;
 
 
+    
 namespace Web.Controllers
 {
     public class AnimalsController : Controller
@@ -124,7 +125,7 @@ namespace Web.Controllers
 
         // GET: Animals/Delete/5
      [HttpGet]
-        public ActionResult Delete(int id, Animals cid )
+        public ActionResult Delete( int id, Animals cid )
         {
             var data = new Animals();
             using (MySqlConnection MysqlCon = new MySqlConnection(connection))

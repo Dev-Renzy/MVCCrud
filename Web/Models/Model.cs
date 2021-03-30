@@ -11,6 +11,7 @@ namespace Web.Models
 {
     public class Animals
     {
+        
         public int AnimalsID { get; set; }
         public string AnimalName { get; set; }
         public string Price { get; set; }

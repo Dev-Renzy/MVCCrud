@@ -22,6 +22,7 @@
                 <td>@animal.Price</td>
                 <td>@animal.Pcs</td>
                 <td>
+                    @*@Html.ActionLink("Insert", "Insert")    |*@
                     @Html.ActionLink("Edit", "Edit", new { id = animal.AnimalsID })    |
                     @Html.ActionLink("Delete", "Delete", new { id = animal.AnimalsID })
 
